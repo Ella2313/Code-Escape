@@ -170,7 +170,7 @@ function App() {
           <button 
           onClick={() => {
             if (answer.toLocaleLowerCase() === "🔷" || answer.toLocaleLowerCase() === "blue diamond" || answer.toLocaleLowerCase() === "diamond") {
-              alert("🔷 kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
+              alert("🏎️ kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
               setAnswer("");
               setLevel(7);
           } else {
@@ -189,9 +189,79 @@ function App() {
           <small>Hint: You can throw me any where and not care</small>
 
           <input
-           
+            type="text"
+            value={answer}
+            onChange={(e) =>
+        setAnswer(e. target.value)}
+               />
+               <button
+                 onClick={() => {
+                  if (answer.toLowerCase() === "alarm clock") {
+                    alert("🗿 You need a sit of honor! you just got it! I would throw mine to the darn neighbors");
+                    setAnswer("");
+                    setLevel(8);
+              } else {
+                  alert("💀...lets try..again. Think teen mode!");
+                }
+              }}
+            >
+              Submit
+            </button>
+        </div>
+      )}
+      {level === 8 && (
+        <div className="App-header">
+          <h2>🤔 Level 8: Memory Challenge</h2>
+          <p>Memorize this numder code, then type it correctly order:</p>
+          <h3>51324</h3>
+          <small>Hint: It's not what you think..</small>
 
+          <input
+            type="text"
+            value={answer}
+            onChange={(e) =>
+              setAnswer(e. target.value)}
+                    />
+                    <button
+                    onClick={() => {
+                      if (answer === "54321") {
+                        alert("😏🔪 Sharp! Brain level going up!!");
+                        setAnswer("");
+                        setLevel(9);
+                   } else {
+                        alert("🤨 hmm? Try again we see..");
+                   }
+                  }}
+              >
+                Submit
+              </button>
+          </div>
+      )}
+      {level === 9 && (
+        <div className="App-header">
+          <h2>👺 Level 9 The final Boss!</h2>
+          <p>You've come so far..But can you solve this last code?</p>
+          <p>
+            Combine the clues:
+            <br />1...The number of colors in 
+       level 5
+            <br />2...The last digit from the
+       memory Challenge
+            <br />3...The number of letters in 
+       the word "falcon"
+          </p>
+          <small>type the answer carefully.....</small>
 
+          <input
+            type="text"
+            value={answer}
+            onChange={(e) =>
+      setAnswer(e .target.value)}
+             />
+             <button
+               onClick={() => {
+                if (answer === "416") {
+                  alert("😼 BOOM!! There goes the boss you just cracked the final lock!!!")
 
              </div>
                      );
