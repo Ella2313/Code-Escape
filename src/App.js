@@ -1,16 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Code-Escape</h1>
-        <p>Find clues, solve puzzle, and unlock your way out! </p>
-        <button>Start Game</button>
-      </header>
-    </div>
-  );
-}
+  const [level, setLevel] =
+useState(0);
+  const [code, setCode] = useState("");
+  const [answer, setAnswer] =
+useState("");
+
+  const correctCode = "321";
+  const correctAnswer = "shadow";
+
+  function startGame() {
+    setLevel(1);
+  }
+  function checkCode() {
+    if (code === correctCode) {
+      alert("😸 Correct! You've unlocked Level 2!");
 
 export default App;
