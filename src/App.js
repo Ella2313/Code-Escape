@@ -129,7 +129,70 @@ function App() {
       {level === 5 && (
         <div className="App-header">
           <h2>🎨 Level 5: The Color Mystery!</h2>
-          <p>The colors hide the mystery code within.... each  </p>
+          <p>The colors hide the mystery code within.... each color's first letter makes the password.</p>
+          <h3>🟥 🟩 🟦 🟨</h3>
+          <small>Hint: Red, Green, Blue, Yellow</small>
+
+          <input
+            type="text"
+            value={answer}
+            onChange={(e) =>
+              setAnswer(e. target.value)}
+                     />
+                     <button
+                     onClick={() => {
+                      if (answer.toLocaleLowerCase() === "rgb y". replace(" ", "")) {
+                        alert("😎 you are a master at this! The colors revel your way forward!");
+                        setAnswer("");
+                        setLevel(6);
+                      } else {
+                        alert("🥲 yk.. just keep on trying! The using the first letter of each color!");
+                      }
+                     }}
+                  >
+                    Submit
+                  </button>
+               </div>
+      )}
+      {level === 6 && (
+        <div className="App-header">
+          <h2>🃏 Level 6: Puzzle Mamble</h2>
+          <p>Find the missing shape in this sequence:</p>
+          <h3>🔷 ⬛ 🔷 ⬜ ___</h3>
+          <small>Hint: Which pattern should come next?</small>
+
+          <input
+          type="text"
+          value={answer}
+          onChange={(e) =>
+    setAnswer(e. target.value) }
+        />
+          <button 
+          onClick={() => {
+            if (answer.toLocaleLowerCase() === "🔷" || answer.toLocaleLowerCase() === "blue diamond" || answer.toLocaleLowerCase() === "diamond") {
+              alert("🔷 kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
+              setAnswer("");
+              setLevel(7);
+          } else {
+              alert("👓 Holy... Camoly...look in closely and see victory!");
+          }
+        }}
+    >
+      Submit
+    </button>
+           </div>
+      )}
+      {level === 7 && (
+        <div className="App-header">
+          <h2>🤓 Level 7: The Pity Riddle</h2>
+          <p>Every night I'm told what to do, and each morning I do what I'm told. But I still don't escape your scold. What am I?</p>
+          <small>Hint: You can throw me any where and not care</small>
+
+          <input
+           
+
+
+
              </div>
                      );
             }
