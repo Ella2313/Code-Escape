@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/https//Ella2313.github.io/Code-Escape/static/css/main.7596c3de.css",
-    "main.js": "/https//Ella2313.github.io/Code-Escape/static/js/main.b739ce9e.js",
-    "static/js/453.20833dbd.chunk.js": "/https//Ella2313.github.io/Code-Escape/static/js/453.20833dbd.chunk.js",
-    "static/media/logo.svg": "/https//Ella2313.github.io/Code-Escape/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/https//Ella2313.github.io/Code-Escape/index.html",
-    "main.7596c3de.css.map": "/https//Ella2313.github.io/Code-Escape/static/css/main.7596c3de.css.map",
-    "main.b739ce9e.js.map": "/https//Ella2313.github.io/Code-Escape/static/js/main.b739ce9e.js.map",
-    "453.20833dbd.chunk.js.map": "/https//Ella2313.github.io/Code-Escape/static/js/453.20833dbd.chunk.js.map"
+    "main.css": "/Code-Escape/static/css/main.7596c3de.css",
+    "main.js": "/Code-Escape/static/js/main.1f540f1b.js",
+    "static/js/453.20833dbd.chunk.js": "/Code-Escape/static/js/453.20833dbd.chunk.js",
+    "static/media/logo.svg": "/Code-Escape/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Code-Escape/index.html",
+    "main.7596c3de.css.map": "/Code-Escape/static/css/main.7596c3de.css.map",
+    "main.1f540f1b.js.map": "/Code-Escape/static/js/main.1f540f1b.js.map",
+    "453.20833dbd.chunk.js.map": "/Code-Escape/static/js/453.20833dbd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7596c3de.css",
-    "static/js/main.b739ce9e.js"
+    "static/js/main.1f540f1b.js"
   ]
 }
