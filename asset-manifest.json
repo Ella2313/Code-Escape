@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Ella2313/Code-Escape.git/static/css/main.7596c3de.css",
+    "main.js": "/Ella2313/Code-Escape.git/static/js/main.2e323304.js",
+    "static/js/453.20833dbd.chunk.js": "/Ella2313/Code-Escape.git/static/js/453.20833dbd.chunk.js",
+    "static/media/logo.svg": "/Ella2313/Code-Escape.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Ella2313/Code-Escape.git/index.html",
+    "main.7596c3de.css.map": "/Ella2313/Code-Escape.git/static/css/main.7596c3de.css.map",
+    "main.2e323304.js.map": "/Ella2313/Code-Escape.git/static/js/main.2e323304.js.map",
+    "453.20833dbd.chunk.js.map": "/Ella2313/Code-Escape.git/static/js/453.20833dbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7596c3de.css",
+    "static/js/main.2e323304.js"
+  ]
+}
