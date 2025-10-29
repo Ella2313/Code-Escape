@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import background from "./background.png";
+import AlertBox from "./AlertBox";
+
 
 function App() {
+  const [alertMessage, setAlertMessage] = useState("");
   const [level, setLevel] = useState(0);
   const [code, setCode] = useState("");
   const [answer, setAnswer] = useState("");
@@ -16,19 +20,19 @@ function App() {
 
   function checkCode() {
     if (code === correctCode) {
-                     alert("😸 Correct! You've unlocked Level 2!");
+                     setAlertMessage("😸 Correct! You've unlocked Level 2!");
                setLevel(2);
     } else {
-      alert("😭 Oof! It's wrong... Let's try again!");
+      setAlertMessage("😭 Oof! It's wrong... Let's try again!");
             }
   }
 
   function checkAnswer() {
                if (answer.toLowerCase() === correctAnswer) {
-      alert("😼 Darn you goated! next stop level 3");
+      setAlertMessage("😼 Darn you goated! next stop level 3");
       setLevel(3);
     } else {
-             alert("😬 MG not again! Don't worry, you got this!");
+             setAlertMessage("😬 MG not again! Don't worry, you got this!");
     }
   }
 
@@ -91,11 +95,11 @@ function App() {
           <button
             onClick={() => {
               if (answer.toLowerCase() === "falcon") {
-                alert("🦅 Bravo! You got it... onto the next level!");
+                setAlertMessage("🦅 Bravo! You got it... onto the next level!");
                 setAnswer("");
                 setLevel(4);
             } else {
-                 alert("😕 Darn this question fr... but you got this homie!");
+                 setAlertMessage("😕 Darn this question fr... but you got this homie!");
               }
           }}
           >
@@ -120,11 +124,11 @@ function App() {
                 <button 
                 onClick={() => {
                   if (answer === "67") {
-                    alert("🫵🤌 magnifico! You are thus genuis!!");
+                    setAlertMessage("🫵🤌 magnifico! You are thus genuis!!");
                     setAnswer("");
                     setLevel(5);
                   } else {
-                    alert("😑 ehemmm...lets try this agan! shall we?");
+                    setAlertMessage("😑 ehemmm...lets try this agan! shall we?");
                   }
                 }}
               >
@@ -151,11 +155,11 @@ function App() {
                      <button
                      onClick={() => {
                       if (answer.toLocaleLowerCase() === "rgb y". replace(" ", "")) {
-                        alert("😎 you are a master at this! The colors revel your way forward!");
+                        setAlertMessage("😎 you are a master at this! The colors revel your way forward!");
                         setAnswer("");
                         setLevel(6);
                       } else {
-                        alert("🥲 yk.. just keep on trying! The using the first letter of each color!");
+                        setAlertMessage("🥲 yk.. just keep on trying! The using the first letter of each color!");
                       }
                      }}
                   >
@@ -181,11 +185,11 @@ function App() {
           <button 
           onClick={() => {
             if (answer.toLocaleLowerCase() === "🔷" || answer.toLocaleLowerCase() === "blue diamond" || answer.toLocaleLowerCase() === "diamond") {
-              alert("🏎️ kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
+              setAlertMessage("🏎️ kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
               setAnswer("");
               setLevel(7);
           } else {
-              alert("👓 Holy... Camoly...look in closely and see victory!");
+              setAlertMessage("👓 Holy... Camoly...look in closely and see victory!");
           }
         }}
     >
@@ -210,11 +214,11 @@ function App() {
                <button
                  onClick={() => {
                   if (answer.toLowerCase() === "alarm clock") {
-                    alert("🗿 You need a sit of honor! you just got it! I would throw mine to the darn neighbors");
+                    setAlertMessage("🗿 You need a sit of honor! you just got it! I would throw mine to the darn neighbors");
                     setAnswer("");
                     setLevel(8);
               } else {
-                  alert("💀...lets try..again. Think teen mode!");
+                  setAlertMessage("💀...lets try..again. Think teen mode!");
                 }
               }}
             >
@@ -240,11 +244,11 @@ function App() {
                     <button
                     onClick={() => {
                       if (answer === "54321") {
-                        alert("😏🔪 Sharp! Brain level going up!!");
+                        setAlertMessage("😏🔪 Sharp! Brain level going up!!");
                         setAnswer("");
                         setLevel(9);
                    } else {
-                        alert("🤨 hmm? Try again we see..");
+                        setAlertMessage("🤨 hmm? Try again we see..");
                    }
                   }}
               >
@@ -278,11 +282,11 @@ function App() {
              <button
                onClick={() => {
                 if (answer === "416") {
-                  alert("😼 BOOM!! There goes the boss.. You just cracked the final lock!!!");
+                  setAlertMessage("😼 BOOM!! There goes the boss.. You just cracked the final lock!!!");
                   setAnswer("");
                   setLevel(10);
              } else {
-                  alert("😧 Nooo your so close...think about it!")
+                  setAlertMessage("😧 Nooo your so close...think about it!")
              }
             }}
           >
@@ -304,7 +308,7 @@ function App() {
 
               <button
          onClick={() => {
-        alert("Restarting your adventure... good luck again!");
+        setAlertMessage("Restarting your adventure... good luck again!");
         setLevel(0);
         setCode("");
         setAnswer("");
@@ -319,8 +323,10 @@ function App() {
     </div>
   </div>
 )}
-             </div>
-                     );
-            }
+<AlertBox message={alertMessage} onClose={() => setAlertMessage("")} />
+
+       </div>
+   );
+}
 
 export default App;
