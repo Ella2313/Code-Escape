@@ -35,6 +35,7 @@ function App() {
                      setAlertMessage("😸 Correct! You've unlocked Level 2!");
                setLevel(2);
     } else {
+      playSound(wrongSound);
       setAlertMessage("😭 Oof! It's wrong... Let's try again!");
             }
   }
@@ -45,6 +46,7 @@ function App() {
       setAlertMessage("😼 Darn you goated! next stop level 3");
       setLevel(3);
     } else {
+      playSound(wrongSound);
              setAlertMessage("😬 MG not again! Don't worry, you got this!");
     }
   }
@@ -113,6 +115,7 @@ function App() {
                 setAnswer("");
                 setLevel(4);
             } else {
+              playSound(wrongSound);
                  setAlertMessage("😕 Darn this question fr... but you got this homie!");
               }
           }}
@@ -143,6 +146,7 @@ function App() {
                     setAnswer("");
                     setLevel(5);
                   } else {
+                    playSound(wrongSound);
                     setAlertMessage("😑 ehemmm...lets try this agan! shall we?");
                   }
                 }}
@@ -175,6 +179,7 @@ function App() {
                         setAnswer("");
                         setLevel(6);
                       } else {
+                        playSound(wrongSound);
                         setAlertMessage("🥲 yk.. just keep on trying! The using the first letter of each color!");
                       }
                      }}
@@ -206,6 +211,7 @@ function App() {
               setAnswer("");
               setLevel(7);
           } else {
+            playSound(wrongSound);
               setAlertMessage("👓 Holy... Camoly...look in closely and see victory!");
           }
         }}
@@ -236,6 +242,7 @@ function App() {
                     setAnswer("");
                     setLevel(8);
               } else {
+                playSound(wrongSound);
                   setAlertMessage("💀...lets try..again. Think teen mode!");
                 }
               }}
@@ -267,6 +274,7 @@ function App() {
                         setAnswer("");
                         setLevel(9);
                    } else {
+                    playSound(wrongSound);
                         setAlertMessage("🤨 hmm? Try again we see..");
                    }
                   }}
@@ -301,11 +309,12 @@ function App() {
              <button
                onClick={() => {
                 if (answer === "416") {
-                  playSound(correctSound);
+                  playSound(victorySound);
                   setAlertMessage("😼 BOOM!! There goes the boss.. You just cracked the final lock!!!");
                   setAnswer("");
                   setLevel(10);
              } else {
+              playSound(wrongSound);
                   setAlertMessage("😧 Nooo your so close...think about it!")
              }
             }}
@@ -328,6 +337,7 @@ function App() {
 
               <button
          onClick={() => {
+          playSound(clickSound);
         setAlertMessage("Restarting your adventure... good luck again!");
         setLevel(0);
         setCode("");
