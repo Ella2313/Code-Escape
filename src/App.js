@@ -3,6 +3,10 @@ import './App.css';
 import { useState } from 'react';
 import background from "./background.png";
 import AlertBox from "./AlertBox";
+import correctSound from "./sounds/correct.mp3";
+import wrongSound from "./sounds/wrong.mp3";
+import clickSound from "./sounds/click.mp3";
+import victorySound from "./sounds/victory.mp3";
 
 
 function App() {
@@ -10,6 +14,13 @@ function App() {
   const [level, setLevel] = useState(0);
   const [code, setCode] = useState("");
   const [answer, setAnswer] = useState("");
+
+    function playSound(soundFile) {
+    const audio = new Audio(soundFile);
+    audio.volume = 0.6;
+    audio.play();
+  }
+
 
   const correctCode = "321";
   const correctAnswer = "candle";
@@ -20,6 +31,7 @@ function App() {
 
   function checkCode() {
     if (code === correctCode) {
+      playSound(correctSound);
                      setAlertMessage("😸 Correct! You've unlocked Level 2!");
                setLevel(2);
     } else {
@@ -29,6 +41,7 @@ function App() {
 
   function checkAnswer() {
                if (answer.toLowerCase() === correctAnswer) {
+                playSound(correctSound);
       setAlertMessage("😼 Darn you goated! next stop level 3");
       setLevel(3);
     } else {
@@ -95,6 +108,7 @@ function App() {
           <button
             onClick={() => {
               if (answer.toLowerCase() === "falcon") {
+                playSound(correctSound);
                 setAlertMessage("🦅 Bravo! You got it... onto the next level!");
                 setAnswer("");
                 setLevel(4);
@@ -124,6 +138,7 @@ function App() {
                 <button 
                 onClick={() => {
                   if (answer === "67") {
+                    playSound(correctSound);
                     setAlertMessage("🫵🤌 magnifico! You are thus genuis!!");
                     setAnswer("");
                     setLevel(5);
@@ -155,6 +170,7 @@ function App() {
                      <button
                      onClick={() => {
                       if (answer.toLocaleLowerCase() === "rgb y". replace(" ", "")) {
+                        playSound(correctSound);
                         setAlertMessage("😎 you are a master at this! The colors revel your way forward!");
                         setAnswer("");
                         setLevel(6);
@@ -185,6 +201,7 @@ function App() {
           <button 
           onClick={() => {
             if (answer.toLocaleLowerCase() === "🔷" || answer.toLocaleLowerCase() === "blue diamond" || answer.toLocaleLowerCase() === "diamond") {
+              playSound(correctSound);
               setAlertMessage("🏎️ kachow...sorry i love cars..ehemmmm. But you got it! Wonderful!!");
               setAnswer("");
               setLevel(7);
@@ -214,6 +231,7 @@ function App() {
                <button
                  onClick={() => {
                   if (answer.toLowerCase() === "alarm clock") {
+                    playSound(correctSound);
                     setAlertMessage("🗿 You need a sit of honor! you just got it! I would throw mine to the darn neighbors");
                     setAnswer("");
                     setLevel(8);
@@ -244,6 +262,7 @@ function App() {
                     <button
                     onClick={() => {
                       if (answer === "54321") {
+                        playSound(correctSound);
                         setAlertMessage("😏🔪 Sharp! Brain level going up!!");
                         setAnswer("");
                         setLevel(9);
@@ -282,6 +301,7 @@ function App() {
              <button
                onClick={() => {
                 if (answer === "416") {
+                  playSound(correctSound);
                   setAlertMessage("😼 BOOM!! There goes the boss.. You just cracked the final lock!!!");
                   setAnswer("");
                   setLevel(10);
